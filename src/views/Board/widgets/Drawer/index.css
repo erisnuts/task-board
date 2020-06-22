@@ -1,0 +1,56 @@
+.drawer__wrapper {
+  position: fixed;
+  bottom: calc(2 * var(--spacing));
+  display: flex;
+  width: calc(2 * var(--card-width) - 2 * var(--spacing));
+  min-width: calc(var(--card-width) - 32px);
+  height: 0;
+  opacity: 0;
+  padding: calc(2 * var(--spacing));
+  margin: 0 calc(2 * var(--spacing));
+  background: white;
+  flex-direction: column;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+
+.drawer__wrapper.visible {
+  height: 150px;
+  opacity: 1;
+}
+
+.drawer__content {
+  overflow-y: auto;
+  margin-bottom: calc(2 * var(--spacing));
+  flex-grow: 1;
+}
+.drawer__header {
+  margin-bottom: calc(2 * var(--spacing));
+}
+
+.drawer__close {
+  position: absolute;
+  cursor: pointer;
+  right: calc(2 * var(--spacing));
+  top: calc(2 * var(--spacing));
+  width: 25px;
+  height: 20px;
+  opacity: 0.3;
+}
+.drawer__close:hover {
+  opacity: 1;
+}
+.drawer__close:before, .drawer__close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+.drawer__close:before {
+  transform: rotate(45deg);
+}
+.drawer__close:after {
+  transform: rotate(-45deg);
+}

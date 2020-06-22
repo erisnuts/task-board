@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-main);
+  min-width: 1024px;
+  height: 100vh;
+}
+
+.header {
+  height: var(--header-height);
+  display: flex;
+  margin: 0 calc(2 * var(--spacing));
+  align-items: center;
+  color: white;
+}
